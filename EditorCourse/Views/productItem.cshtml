@@ -1,0 +1,73 @@
+﻿@inherits UmbracoTemplatePage
+@{
+	Layout = "Master.cshtml";
+	
+                    
+    //fetch nodes
+    var docs = CurrentPage.Site().FirstChild("documentation").Children("documentation").Where("Visible");
+	
+}
+
+<div class="container">
+	<div class="row">
+		<div class="page-header">
+				<h1>@Umbraco.Field("pageName")</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-9">
+			
+			
+	<!--=========== REPLACE THE FOLLOWING WITH NEW GRID PROPERTY ================== -->
+			@CurrentPage.GetGridHtml("productInfo")
+	<!--=========================================================================== -->
+			
+			
+		</div>
+				
+		<div class="col-md-3">
+			@if (docs.Any())
+			{
+				
+				<ul class="nav nav-list">
+					<li><h4>Documentation</h4></li>
+					@foreach (var item in docs)
+					{
+						<li>
+							<a href="@item.Url">@item.Name</a>
+						</li>
+					}
+				</ul>
+			}
+
+		    <hr />
+			
+		    <!-- =========== GREAT PLACE FOR CURRATED FORUM POSTS =========== -->
+            <ul class="nav nav-list">
+                @foreach (dynamic item in CurrentPage.relatedForumPosts)
+                {
+                    <li>
+                        <h5>@item.Fields.nodeName</h5>
+                        <a href="https://our.umbraco.org/@item.Fields.url">
+                            Check it out on Our Umbraco!
+                        </a>
+                    </li>
+                }
+            </ul>
+				
+				
+		    <!-- ============================================================ -->
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<footer>
+				Updated by 
+				@Umbraco.Field("writerName")
+				on
+				@Umbraco.Field("updateDate", formatAsDate: true)
+			</footer>
+		</div>
+	</div>
+</div>

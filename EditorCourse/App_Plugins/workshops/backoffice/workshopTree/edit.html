@@ -1,0 +1,30 @@
+<form name="contentForm" 
+      ng-controller="My.Workshop.EditController as vm"
+      ng-submit="vm.save()">
+    <umb-editor-view>
+        <umb-editor-header name="vm.workshop.name"
+                           hide-alias="true"
+                           hide-description="true"
+                           hide-icon="true"
+        </umb-editor-header>
+        <umb-editor-container class="form-horizontal">
+            <umb-property property="vm.properties.description">
+                <textarea ng-model="vm.workshop.description"></textarea>
+            </umb-property>
+        </umb-editor-container>
+        <umb-editor-footer>
+            <umb-editor-footer-content-right>
+                <umb-button action="vm.save()"
+                            type="button"
+                            state="vm.buttonState"
+                            shortcut="ctrl+s"
+                            label="Save workshop"
+                            disable="vm.buttonState === 'busy'">
+                </umb-button>
+            </umb-editor-footer-content-right>
+        </umb-editor-footer>
+    </umb-editor-view>
+</form>
+
+
+

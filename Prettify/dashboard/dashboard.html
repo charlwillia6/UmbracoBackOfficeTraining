@@ -1,0 +1,16 @@
+<div ng-controller="community.dashboard">
+
+    <h4>Active Community Members</h4>
+    <p>Latest changes made to our community member profiles, ensure content is updated at least once a week.</p>
+    <div class="media" ng-repeat="communityMember in community">
+        <a class="pull-left" ng-href="#/content/content/edit/{{communityMember.id}}">
+            <img class="media-object img-circle" src="https://twitter.com/{{communityMember.avatar}}/profile_image?size=normal">
+        </a>
+
+        <div class="media-body" ng-class="{'text-error': communityMember.outdated}">
+            <h4 class="media-heading">{{communityMember.name}}</h4>
+            last update: {{communityMember.diff}}
+        </div>
+    </div>
+
+</div>

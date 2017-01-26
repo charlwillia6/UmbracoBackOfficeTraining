@@ -1,0 +1,17 @@
+{
+    propertyEditors:[
+        {
+          name: "Twitter Username",
+          alias: "my.TwitterUsername",
+          isParameterEditor: true,
+          icon: "icon-bird",
+          group: "social media",
+          editor:{
+              view: "/app_plugins/twitterusername/editor.html"
+          }
+        }
+    ],
+    css: [
+        "/app_plugins/twitterusername/editor.css"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+
+	javascript: [
+		"~/app_plugins/workshops/workshop.resource.js",
+        "~/app_plugins/workshops/backoffice/workshopTree/edit.controller.js",
+        "~/app_plugins/workshops/backoffice/workshopTree/delete.controller.js",
+	]
+
+
+}

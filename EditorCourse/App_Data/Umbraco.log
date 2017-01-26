@@ -1,0 +1,18 @@
+
+Header checksum is valid.
+Source      : C:\Users\cwilli34\Documents\My Web Sites\Umbraco BackOffice Training\EditorCourse\App_Data\Umbraco.sdf
+Destination : C:\Users\cwilli34\AppData\Local\Temp\sqlFB28.tmp
+Repairing - verMajor: 4, verMinor: 0, verBuild: 8876, verPoint: 1
+Time - 2017-25-01 10:15:01.734
+
+ All Pages have valid checksum.
+Parse the db file and build list of tables ... DONE.
+Cleanup Page list ... DONE.
+Scan bad pages ... DONE.
+Parse SysObjects table ... DONE.
+Copy Schema ... DONE.
+Copy Tables ... DONE.
+Copy Constraints ... DONE.
+Copy Indexes ... DONE.
+Copy Constraints ... DONE.
+
